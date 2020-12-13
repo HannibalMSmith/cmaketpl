@@ -14,6 +14,27 @@ if (CMAKE_BUILD_TYPE STREQUAL Debug)
     )
 endif()
 
+set(CXX_FLAGS
+ -g
+ # -DVALGRIND
+ -DCHECK_PTHREAD_RETURN_VALUE
+ -D_FILE_OFFSET_BITS=64
+ -Wall
+ -Wextra
+ -Werror
+ -Wconversion
+ -Wno-unused-parameter
+ -Wold-style-cast
+ -Woverloaded-virtual
+ -Wpointer-arith
+ -Wshadow
+ -Wwrite-strings
+ -march=native
+ # -MMD
+ -std=c++11
+ -rdynamic
+ )
+
 project(Test VERSION 0.6)
 
 #项目版本配置
