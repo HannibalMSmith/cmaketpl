@@ -1,4 +1,5 @@
-#pragma once
+#idndef LEARNCMAKE_FOO
+#define LEARNCMAKE_FOO
 #include "config.h"
 
 class foo
@@ -13,4 +14,4 @@ public:
     void run();
 };
 
-
+#endif
